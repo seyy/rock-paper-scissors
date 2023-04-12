@@ -1,0 +1,47 @@
+body {
+    background-color:rgb(129, 123, 129);
+    margin: 155px;
+}
+
+
+.text {
+    color:rgb(228, 225, 230);
+    text-align: center;
+    font-size: 50px;
+}
+
+
+.hej {
+    display: flex;
+    justify-content: center;    
+}
+
+#playerChoice2 {
+    margin: 0 15px;
+}
+
+.btn {
+    width: 100px;
+    height: 50px;
+    border-style: hidden;
+    border-radius: 50px;
+    cursor: pointer;
+    background-color:rgba(202, 196, 188, 0.61);
+    color:azure;
+    transition: all 0.1s ease-in-out;
+}
+
+.btn.animate {
+    transform: scale(1.05);
+}
+
+.btn:hover {
+    background-color: rgba(182, 196, 188, 0.61);
+    transition: 0.15s;
+}
+
+.buttonImage {
+    width: 43px;
+}
+
+
