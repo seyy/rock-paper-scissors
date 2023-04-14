@@ -1,32 +1,41 @@
 const playerChoices = document.getElementById("playerChoice")
 const playerChoices1 = document.getElementById("playerChoice2")
 const playerChoices2 = document.getElementById("playerChoice3")
+const div = document.getElementById("hej")
 
-
+// FUNCTION THAT RANDOMLY SELECTS A BOT CHOICE
 
 const computerChoice = () => {
     let botChoice = Math.floor(Math.random() * 3);
     console.log(`bot choice: ${botChoice}`);
+    if(botChoice === 0) {
+      setTimeout(() => {
+        div.innerHTML = ""
+      }, 1000);
+    }
 }
+
 
 
 // FUNCTIONS THAT TELL US WHICH CHOICE A PLAYER HAS MADE AND AFTER A CLICK ON BUTTON IT CALLS A FUNCTION computerChoice() which randomly selects a computer choice
 
+
 playerChoices.addEventListener("click", () => {
-    let userChoice = 1;
-    console.log(` userChoice: ${userChoice}`)
-    computerChoice();
+  let userChoice = 0;
+  console.log(` userChoice: ${userChoice}`)
+  computerChoice();
 });
 playerChoices1.addEventListener("click", () => {
-    let userChoice = 2
-    console.log(` userChoice: ${userChoice}`)
-    computerChoice();
+    let userChoice = 1;
+  console.log(` userChoice: ${userChoice}`)
+  computerChoice();
 });
 playerChoices2.addEventListener("click", () => {
-   let userChoice = 3
-   console.log(` userChoice: ${userChoice}`)
-   computerChoice();
+  let userChoice = 2;
+  console.log(` userChoice: ${userChoice}`)
+  computerChoice();
 });
+      
 
 
 
@@ -45,36 +54,6 @@ btn.addEventListener('transitionend', () => {
 });
 });
 
-
-// DECIDING WHO WON THE GAME.
-
-if(userChoice === botChoice) {       //ITS A DRAW
-    
-}
-
-if(userChoice === 1 && botChoice === 3) {     // USER WINS
-
-}
-
-if(userChoice === 1 && botChoice === 2) {      // BOT WINS
-
-}
-
-if(userChoice === 2 && botChoice === 1) {      // USER WINS
-
-}
-
-if(userChoice === 2 && botChoice === 3) {       //BOT WINS
-
-}
-
-if(userChoice === 3 && botChoice === 2) {       // USER WINS
-
-}
-
-if(userChoice ===3 && botChoice ===1 ) {        // BOT WINS
-
-}
 
 
 
